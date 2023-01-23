@@ -1,0 +1,6 @@
+org\acme\resources\Store.class
+META-INF\panache-archive.marker
+org\acme\services\StoreService.class
+org\acme\repositories\StoreRepository.class
+org\acme\GreetingResource.class
+org\acme\resources\Product.class

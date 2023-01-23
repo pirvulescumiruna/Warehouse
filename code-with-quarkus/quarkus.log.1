@@ -1,0 +1,759 @@
+2023-01-22 22:34:10,181 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.cors.orgins" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2023-01-22 22:34:10,265 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.qua.feature] (Quarkus Main Thread) Hibernate Features Enabled
+2023-01-22 22:34:10,423 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.jpa.int.uti.LogHelper] (Quarkus Main Thread) PersistenceUnitInfo [
+	name: <default>
+	persistence provider classname: null
+	classloader: null
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: null
+	Transaction type: JTA
+	PU root URL: null
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names [
+		org.acme.resources.Store
+		io.quarkus.hibernate.orm.panache.PanacheEntityBase
+		org.acme.resources.Product
+		io.quarkus.hibernate.orm.panache.PanacheEntity]
+	Mapping files names []
+	Properties [
+		hibernate.query.plan_cache_max_size: 2048
+		hibernate.default_batch_fetch_size: 16
+		hibernate.discriminator.ignore_explicit_for_joined: false
+		hibernate.hbm2ddl.charset_name: UTF-8
+		hibernate.cache.use_reference_entries: null
+		hibernate.cache.use_query_cache: null
+		hibernate.dialect: io.quarkus.hibernate.orm.runtime.dialect.QuarkusPostgreSQL10Dialect
+		javax.persistence.sharedCache.mode: null
+		hibernate.query.in_clause_parameter_padding: true
+		hibernate.cache.use_second_level_cache: null
+		hibernate.id.sequence.increment_size_mismatch_strategy: null
+		hibernate.batch_fetch_style: PADDED
+		hibernate.order_by.default_null_ordering: none]
+2023-01-22 22:34:10,512 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.Version] (Quarkus Main Thread) HHH000412: Hibernate ORM core version [WORKING]
+2023-01-22 22:34:10,515 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Environment] (Quarkus Main Thread) HHH000206: hibernate.properties not found
+2023-01-22 22:34:10,595 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.ann.com.Version] (Quarkus Main Thread) HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-22 22:34:10,629 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration boolean -> org.hibernate.type.BooleanType@2911cce9
+2023-01-22 22:34:10,629 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration boolean -> org.hibernate.type.BooleanType@2911cce9
+2023-01-22 22:34:10,629 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2911cce9
+2023-01-22 22:34:10,629 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4428b2ff
+2023-01-22 22:34:10,630 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration true_false -> org.hibernate.type.TrueFalseType@3b093d4f
+2023-01-22 22:34:10,630 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration yes_no -> org.hibernate.type.YesNoType@6babfe9c
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration byte -> org.hibernate.type.ByteType@4cfa0184
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration byte -> org.hibernate.type.ByteType@4cfa0184
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4cfa0184
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration character -> org.hibernate.type.CharacterType@4d44fdae
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration char -> org.hibernate.type.CharacterType@4d44fdae
+2023-01-22 22:34:10,655 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4d44fdae
+2023-01-22 22:34:10,656 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration short -> org.hibernate.type.ShortType@3f55520c
+2023-01-22 22:34:10,656 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration short -> org.hibernate.type.ShortType@3f55520c
+2023-01-22 22:34:10,656 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3f55520c
+2023-01-22 22:34:10,657 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration integer -> org.hibernate.type.IntegerType@b3e0464
+2023-01-22 22:34:10,657 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration int -> org.hibernate.type.IntegerType@b3e0464
+2023-01-22 22:34:10,657 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@b3e0464
+2023-01-22 22:34:10,659 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration long -> org.hibernate.type.LongType@1754c2a6
+2023-01-22 22:34:10,659 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration long -> org.hibernate.type.LongType@1754c2a6
+2023-01-22 22:34:10,659 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Long -> org.hibernate.type.LongType@1754c2a6
+2023-01-22 22:34:10,660 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration float -> org.hibernate.type.FloatType@7d97e46f
+2023-01-22 22:34:10,662 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration float -> org.hibernate.type.FloatType@7d97e46f
+2023-01-22 22:34:10,662 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7d97e46f
+2023-01-22 22:34:10,663 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration double -> org.hibernate.type.DoubleType@68471ce3
+2023-01-22 22:34:10,663 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration double -> org.hibernate.type.DoubleType@68471ce3
+2023-01-22 22:34:10,663 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@68471ce3
+2023-01-22 22:34:10,664 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@132128ab
+2023-01-22 22:34:10,664 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@132128ab
+2023-01-22 22:34:10,665 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration big_integer -> org.hibernate.type.BigIntegerType@22d1999b
+2023-01-22 22:34:10,665 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@22d1999b
+2023-01-22 22:34:10,665 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration string -> org.hibernate.type.StringType@60a7a532
+2023-01-22 22:34:10,665 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.String -> org.hibernate.type.StringType@60a7a532
+2023-01-22 22:34:10,666 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration nstring -> org.hibernate.type.StringNVarcharType@30570dc1
+2023-01-22 22:34:10,666 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@2a291f10
+2023-01-22 22:34:10,667 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration url -> org.hibernate.type.UrlType@41a468f
+2023-01-22 22:34:10,667 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.net.URL -> org.hibernate.type.UrlType@41a468f
+2023-01-22 22:34:10,668 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration Duration -> org.hibernate.type.DurationType@59c9fd0b
+2023-01-22 22:34:10,668 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.Duration -> org.hibernate.type.DurationType@59c9fd0b
+2023-01-22 22:34:10,669 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration Instant -> org.hibernate.type.InstantType@5178caf6
+2023-01-22 22:34:10,669 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.Instant -> org.hibernate.type.InstantType@5178caf6
+2023-01-22 22:34:10,670 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@33cb9e56
+2023-01-22 22:34:10,670 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@33cb9e56
+2023-01-22 22:34:10,671 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6533989e
+2023-01-22 22:34:10,671 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6533989e
+2023-01-22 22:34:10,672 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@73041096
+2023-01-22 22:34:10,672 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@73041096
+2023-01-22 22:34:10,674 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@643c4b7a
+2023-01-22 22:34:10,674 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@643c4b7a
+2023-01-22 22:34:10,675 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@bea5085
+2023-01-22 22:34:10,675 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@bea5085
+2023-01-22 22:34:10,677 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@72e4de0e
+2023-01-22 22:34:10,677 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@72e4de0e
+2023-01-22 22:34:10,681 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration date -> org.hibernate.type.DateType@2137f064
+2023-01-22 22:34:10,681 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.Date -> org.hibernate.type.DateType@2137f064
+2023-01-22 22:34:10,682 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration time -> org.hibernate.type.TimeType@27d608a3
+2023-01-22 22:34:10,682 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.Time -> org.hibernate.type.TimeType@27d608a3
+2023-01-22 22:34:10,685 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration timestamp -> org.hibernate.type.TimestampType@7e610aa4
+2023-01-22 22:34:10,685 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7e610aa4
+2023-01-22 22:34:10,685 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7e610aa4
+2023-01-22 22:34:10,686 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2a21bfc8
+2023-01-22 22:34:10,688 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration calendar -> org.hibernate.type.CalendarType@340bde38
+2023-01-22 22:34:10,688 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@340bde38
+2023-01-22 22:34:10,688 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@340bde38
+2023-01-22 22:34:10,688 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@238f4b0a
+2023-01-22 22:34:10,689 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@55cd41f5
+2023-01-22 22:34:10,690 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration locale -> org.hibernate.type.LocaleType@72357b7b
+2023-01-22 22:34:10,690 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@72357b7b
+2023-01-22 22:34:10,690 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration currency -> org.hibernate.type.CurrencyType@1825811b
+2023-01-22 22:34:10,690 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@1825811b
+2023-01-22 22:34:10,692 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration timezone -> org.hibernate.type.TimeZoneType@412b4e0e
+2023-01-22 22:34:10,692 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@412b4e0e
+2023-01-22 22:34:10,693 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration class -> org.hibernate.type.ClassType@7e567d37
+2023-01-22 22:34:10,693 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7e567d37
+2023-01-22 22:34:10,695 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@27e13f25
+2023-01-22 22:34:10,695 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@27e13f25
+2023-01-22 22:34:10,695 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@13f84f9b
+2023-01-22 22:34:10,696 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration binary -> org.hibernate.type.BinaryType@83828d4
+2023-01-22 22:34:10,696 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration byte[] -> org.hibernate.type.BinaryType@83828d4
+2023-01-22 22:34:10,696 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration [B -> org.hibernate.type.BinaryType@83828d4
+2023-01-22 22:34:10,697 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@454a4321
+2023-01-22 22:34:10,697 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@454a4321
+2023-01-22 22:34:10,697 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@454a4321
+2023-01-22 22:34:10,697 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration row_version -> org.hibernate.type.RowVersionType@6b7c44ba
+2023-01-22 22:34:10,697 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration image -> org.hibernate.type.ImageType@3a295ad9
+2023-01-22 22:34:10,698 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration characters -> org.hibernate.type.CharArrayType@731ebbc0
+2023-01-22 22:34:10,698 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration char[] -> org.hibernate.type.CharArrayType@731ebbc0
+2023-01-22 22:34:10,698 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration [C -> org.hibernate.type.CharArrayType@731ebbc0
+2023-01-22 22:34:10,699 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@645abdc9
+2023-01-22 22:34:10,699 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@645abdc9
+2023-01-22 22:34:10,699 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@645abdc9
+2023-01-22 22:34:10,699 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration text -> org.hibernate.type.TextType@6d8a6c6c
+2023-01-22 22:34:10,699 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration ntext -> org.hibernate.type.NTextType@1d850c96
+2023-01-22 22:34:10,702 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration blob -> org.hibernate.type.BlobType@1b43645d
+2023-01-22 22:34:10,702 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@1b43645d
+2023-01-22 22:34:10,702 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2ac63609
+2023-01-22 22:34:10,704 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration clob -> org.hibernate.type.ClobType@1411c631
+2023-01-22 22:34:10,704 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1411c631
+2023-01-22 22:34:10,705 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration nclob -> org.hibernate.type.NClobType@21458999
+2023-01-22 22:34:10,705 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@21458999
+2023-01-22 22:34:10,705 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@21a46060
+2023-01-22 22:34:10,705 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3a497c23
+2023-01-22 22:34:10,707 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration serializable -> org.hibernate.type.SerializableType@20731515
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration object -> org.hibernate.type.ObjectType@2d7759c3
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2d7759c3
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2f529b6d
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@5e8b42c0
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@66e83fb9
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@71c6cbe6
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4a74af40
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4e6d698c
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@695f820f
+2023-01-22 22:34:10,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@2e01ed39
+2023-01-22 22:34:10,713 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.BootstrapContextImpl] (Quarkus Main Thread) Injecting Scanner [io.quarkus.hibernate.orm.runtime.boot.scan.QuarkusScanner@41605916] into BootstrapContext; was [null]
+2023-01-22 22:34:10,713 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.BootstrapContextImpl] (Quarkus Main Thread) Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@646469bf] into BootstrapContext; was [null]
+2023-01-22 22:34:10,713 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.BootstrapContextImpl] (Quarkus Main Thread) Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@71bec0c6] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@507783ed]
+2023-01-22 22:34:10,717 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.BootstrapContextImpl] (Quarkus Main Thread) Injecting JPA temp ClassLoader [null] into BootstrapContext; was [null]
+2023-01-22 22:34:10,717 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) ClassLoaderAccessImpl#injectTempClassLoader(null) [was null]
+2023-01-22 22:34:10,749 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.dia.Dialect] (Quarkus Main Thread) HHH000400: Using dialect: io.quarkus.hibernate.orm.runtime.dialect.QuarkusPostgreSQL10Dialect
+2023-01-22 22:34:10,763 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.eng.jdb.env.int.LobCreatorBuilderImpl] (Quarkus Main Thread) HHH000422: Disabling contextual LOB creation as connection was null
+2023-01-22 22:34:10,765 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@131cd81c
+2023-01-22 22:34:10,765 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@131cd81c
+2023-01-22 22:34:10,765 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.BasicTypeRegistry] (Quarkus Main Thread) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@27e13f25
+2023-01-22 22:34:10,766 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.spi.TypeConfiguration$Scope] (Quarkus Main Thread) Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@54f26251] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@53cd30f9]
+2023-01-22 22:34:10,772 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.mod.sou.int.ann.AnnotationMetadataSourceProcessorImpl] (Quarkus Main Thread) Encountered a non-categorized annotated class [io.quarkus.hibernate.orm.panache.PanacheEntityBase]; ignoring
+2023-01-22 22:34:10,773 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.mod.rel.Namespace] (Quarkus Main Thread) Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2023-01-22 22:34:10,780 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.mod.sou.int.ann.AnnotationMetadataSourceProcessorImpl] (Quarkus Main Thread) Skipping explicit MappedSuperclass io.quarkus.hibernate.orm.panache.PanacheEntity, the class will be discovered analyzing the implementing class
+2023-01-22 22:34:10,782 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AnnotationBinder] (Quarkus Main Thread) Binding entity from annotated class: org.acme.resources.Product
+2023-01-22 22:34:10,804 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2023-01-22 22:34:10,806 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.EntityBinder] (Quarkus Main Thread) Import with entity name Product
+2023-01-22 22:34:10,811 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.EntityBinder] (Quarkus Main Thread) Bind entity org.acme.resources.Product on table product
+2023-01-22 22:34:10,833 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(product), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,835 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) Not known whether passed class name [org.acme.resources.Product] is safe
+2023-01-22 22:34:10,835 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : org.acme.resources.Product
+2023-01-22 22:34:10,835 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property id with lazy=false
+2023-01-22 22:34:10,836 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Product:id]
+2023-01-22 22:34:10,837 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for id
+2023-01-22 22:34:10,841 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property id
+2023-01-22 22:34:10,845 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.BinderHelper] (Quarkus Main Thread) #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2023-01-22 22:34:10,846 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(product), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,846 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property name with lazy=false
+2023-01-22 22:34:10,846 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Product:name]
+2023-01-22 22:34:10,846 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for name
+2023-01-22 22:34:10,846 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property name
+2023-01-22 22:34:10,847 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(product), mappingColumn=store_id, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,847 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property store_id with lazy=false
+2023-01-22 22:34:10,847 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Product:store_id]
+2023-01-22 22:34:10,847 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for store_id
+2023-01-22 22:34:10,847 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property store_id
+2023-01-22 22:34:10,853 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AnnotationBinder] (Quarkus Main Thread) Binding entity from annotated class: org.acme.resources.Store
+2023-01-22 22:34:10,853 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2023-01-22 22:34:10,853 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.EntityBinder] (Quarkus Main Thread) Import with entity name Store
+2023-01-22 22:34:10,853 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.EntityBinder] (Quarkus Main Thread) Bind entity org.acme.resources.Store on table store
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) Not known whether passed class name [org.acme.resources.Store] is safe
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : org.acme.resources.Store
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property id with lazy=false
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Store:id]
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for id
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property id
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.BinderHelper] (Quarkus Main Thread) #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=city, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property city with lazy=false
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Store:city]
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for city
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property city
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) MetadataSourceProcessor property name with lazy=false
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.AbstractPropertyHolder] (Quarkus Main Thread) Attempting to locate auto-apply AttributeConverter for property [org.acme.resources.Store:name]
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) building SimpleValue for name
+2023-01-22 22:34:10,861 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property name
+2023-01-22 22:34:10,862 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,867 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,867 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3Column{table=org.hibernate.mapping.Table(store), mappingColumn=products_KEY, insertable=true, updatable=true, unique=false}
+2023-01-22 22:34:10,868 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3JoinColumn{logicalColumnName='products_KEY', referencedColumn='null', mappedBy='null'}
+2023-01-22 22:34:10,869 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3JoinColumn{logicalColumnName='store_id', referencedColumn='', mappedBy=''}
+2023-01-22 22:34:10,869 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Ejb3Column] (Quarkus Main Thread) Binding column: Ejb3JoinColumn{logicalColumnName='product_id', referencedColumn='', mappedBy=''}
+2023-01-22 22:34:10,870 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.CollectionBinder] (Quarkus Main Thread) Collection role: org.acme.resources.Store.products
+2023-01-22 22:34:10,871 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.PropertyBinder] (Quarkus Main Thread) Building property products
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for id
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for name
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for store_id
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for id
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for city
+2023-01-22 22:34:10,873 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.SimpleValueBinder] (Quarkus Main Thread) Starting fillSimpleValue for name
+2023-01-22 22:34:10,875 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.map.PrimaryKey] (Quarkus Main Thread) Forcing column [id] to be non-null as it is part of the primary key for table [product]
+2023-01-22 22:34:10,875 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.map.PrimaryKey] (Quarkus Main Thread) Forcing column [id] to be non-null as it is part of the primary key for table [store]
+2023-01-22 22:34:10,875 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.CollectionSecondPass] (Quarkus Main Thread) Second pass for collection: org.acme.resources.Store.products
+2023-01-22 22:34:10,875 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.ann.CollectionBinder] (Quarkus Main Thread) Binding as ManyToMany: org.acme.resources.Store.products
+2023-01-22 22:34:10,883 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.CollectionSecondPass] (Quarkus Main Thread) Mapped collection key: store_id, element: product_id
+2023-01-22 22:34:10,885 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.InFlightMetadataCollectorImpl] (Quarkus Main Thread) Resolving reference to class: org.acme.resources.Product
+2023-01-22 22:34:10,887 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.InFlightMetadataCollectorImpl] (Quarkus Main Thread) Resolving reference to class: org.acme.resources.Store
+2023-01-22 22:34:10,887 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.InFlightMetadataCollectorImpl] (Quarkus Main Thread) Resolving reference to class: org.acme.resources.Product
+2023-01-22 22:34:10,887 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.InFlightMetadataCollectorImpl] (Quarkus Main Thread) Resolving reference to class: org.acme.resources.Store
+2023-01-22 22:34:10,895 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.reg.int.BootstrapServiceRegistryImpl] (Quarkus Main Thread) Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2023-01-22 22:34:10,896 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.reg.int.BootstrapServiceRegistryImpl] (Quarkus Main Thread) Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2023-01-22 22:34:10,898 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) Not known whether passed class name [org.acme.resources.Store] is safe
+2023-01-22 22:34:10,898 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : org.acme.resources.Store
+2023-01-22 22:34:10,901 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) Not known whether passed class name [org.acme.resources.Product] is safe
+2023-01-22 22:34:10,901 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.int.ClassLoaderAccessImpl] (Quarkus Main Thread) No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : org.acme.resources.Product
+2023-01-22 22:34:12,083 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) Database ->
+       name : PostgreSQL
+    version : 15.1
+      major : 15
+      minor : 1
+2023-01-22 22:34:12,085 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.5.1
+      major : 42
+      minor : 5
+2023-01-22 22:34:12,085 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) JDBC version : 4.2
+2023-01-22 22:34:12,086 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.eng.jdb.env.spi.IdentifierHelperBuilder] (JPA Startup Thread) JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2023-01-22 22:34:12,160 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryImpl] (JPA Startup Thread) Building session factory
+2023-01-22 22:34:12,161 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) SessionFactory name : null
+2023-01-22 22:34:12,162 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Automatic flush during beforeCompletion(): enabled
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Automatic session close at end of transaction: disabled
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Statistics: disabled
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Deleted entity synthetic identifier rollback: disabled
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Default entity-mode: pojo
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2023-01-22 22:34:12,163 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Allow initialization of lazy state outside session : disabled
+2023-01-22 22:34:12,164 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Using BatchFetchStyle : PADDED
+2023-01-22 22:34:12,164 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Default batch fetch size: 16
+2023-01-22 22:34:12,164 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Maximum outer join fetch depth: null
+2023-01-22 22:34:12,164 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Default null ordering: NONE
+2023-01-22 22:34:12,164 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Order SQL updates by primary key: enabled
+2023-01-22 22:34:12,165 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Order SQL inserts for batching: disabled
+2023-01-22 22:34:12,165 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) multi-tenancy strategy : NONE
+2023-01-22 22:34:12,165 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JTA Track by Thread: enabled
+2023-01-22 22:34:12,165 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Query language substitutions: {}
+2023-01-22 22:34:12,166 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Named query checking : enabled
+2023-01-22 22:34:12,166 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Second-level cache: enabled
+2023-01-22 22:34:12,166 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Second-level query cache: enabled
+2023-01-22 22:34:12,166 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Second-level query cache factory: org.hibernate.cache.internal.StandardTimestampsCacheFactory@708d8ec5
+2023-01-22 22:34:12,166 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Second-level cache region prefix: null
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Optimize second-level cache for minimal puts: disabled
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Structured second-level cache entries: disabled
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Second-level cache direct-reference entries: enabled
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Automatic eviction of collection cache: disabled
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JDBC batch size: 15
+2023-01-22 22:34:12,167 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JDBC batch updates for versioned data: enabled
+2023-01-22 22:34:12,168 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Scrollable result sets: enabled
+2023-01-22 22:34:12,168 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Wrap result sets: disabled
+2023-01-22 22:34:12,169 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JDBC3 getGeneratedKeys(): enabled
+2023-01-22 22:34:12,169 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JDBC result set fetch size: null
+2023-01-22 22:34:12,169 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Connection release mode: BEFORE_TRANSACTION_COMPLETION
+2023-01-22 22:34:12,169 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) Generate SQL with comments: disabled
+2023-01-22 22:34:12,170 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JPA compliance - query : disabled
+2023-01-22 22:34:12,170 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JPA compliance - closed-handling : disabled
+2023-01-22 22:34:12,170 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JPA compliance - lists : disabled
+2023-01-22 22:34:12,170 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.cfg.Settings] (JPA Startup Thread) JPA compliance - transactions : disabled
+2023-01-22 22:34:12,229 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.ser.int.SessionFactoryServiceRegistryImpl] (JPA Startup Thread) EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2023-01-22 22:34:12,267 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryImpl] (JPA Startup Thread) Session factory constructed with filter configurations : {}
+2023-01-22 22:34:12,267 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryImpl] (JPA Startup Thread) Instantiating session factory with properties: {hibernate.hbm2ddl.schema-generation.script.append=false, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_RELEASE_BEFORE_TRANSACTION_COMPLETION, hibernate.dialect=io.quarkus.hibernate.orm.runtime.dialect.QuarkusPostgreSQL10Dialect, hibernate.cache.use_query_cache=true, hibernate.hbm2ddl.charset_name=UTF-8, hibernate.xml_mapping_enabled=false, hibernate.query.plan_cache_max_size=2048, hibernate.id.sequence.increment_size_mismatch_strategy=NONE, javax.persistence.schema-generation.scripts.action=none, hibernate.order_updates=true, hibernate.order_by.default_null_ordering=none, javax.persistence.sharedCache.mode=ENABLE_SELECTIVE, hibernate.allow_update_outside_transaction=false, hibernate.bytecode.allow_enhancement_as_proxy=true, javax.persistence.schema-generation.database.action=none, javax.persistence.create-database-schemas=false, hibernate.cache.use_reference_entries=true, hibernate.cache.use_second_level_cache=true, hibernate.persistenceUnitName=<default>, hibernate.multiTenancy=NONE, hibernate.query.in_clause_parameter_padding=true, hibernate.jdbc.wrap_result_sets=false, hibernate.temp.use_jdbc_metadata_defaults=true, hibernate.discriminator.ignore_explicit_for_joined=false, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl, hibernate.connection.provider_disables_autocommit=true, hibernate.connection.datasource=io.agroal.pool.DataSource@7ea94530, hibernate.cache.region.factory_class=org.infinispan.quarkus.hibernate.cache.QuarkusInfinispanRegionFactory, hibernate.default_batch_fetch_size=16, hibernate.batch_fetch_style=PADDED}
+2023-01-22 22:34:12,299 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryImpl] (JPA Startup Thread) Instantiated session factory
+2023-01-22 22:34:12,300 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.spi.TypeConfiguration$Scope] (JPA Startup Thread) Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@54f26251] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@49ab4ae1]
+2023-01-22 22:34:12,364 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.col.AbstractCollectionPersister] (JPA Startup Thread) Static SQL for collection: org.acme.resources.Store.products
+2023-01-22 22:34:12,364 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.col.AbstractCollectionPersister] (JPA Startup Thread)  Row insert: insert into store_to_product (store_id, product_id) values (?, ?)
+2023-01-22 22:34:12,364 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.col.AbstractCollectionPersister] (JPA Startup Thread)  Row update: update store_to_product set product_id=? where store_id=? and product_id=?
+2023-01-22 22:34:12,364 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.col.AbstractCollectionPersister] (JPA Startup Thread)  Row delete: delete from store_to_product where store_id=? and product_id=?
+2023-01-22 22:34:12,364 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.col.AbstractCollectionPersister] (JPA Startup Thread)  One-shot delete: delete from store_to_product where store_id=?
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread) Static SQL for entity: org.acme.resources.Store
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Version select: select id from store where id =?
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Snapshot select: select store_.id, store_.city as city2_1_, store_.name as name3_1_ from store store_ where store_.id=?
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Insert 0: insert into store (city, name, id) values (?, ?, ?)
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Update 0: update store set city=?, name=? where id=?
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Delete 0: delete from store where id=?
+2023-01-22 22:34:12,367 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Identity insert: insert into store (city, name) values (?, ?)
+2023-01-22 22:34:12,390 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.spa.QuerySpacesImpl] (JPA Startup Thread) Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a553803]
+2023-01-22 22:34:12,391 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : city
+2023-01-22 22:34:12,391 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : name
+2023-01-22 22:34:12,391 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : products
+2023-01-22 22:34:12,399 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.spa.QuerySpacesImpl] (JPA Startup Thread) Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@e734f60]
+2023-01-22 22:34:12,405 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.spa.QuerySpacesImpl] (JPA Startup Thread) Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a771337]
+2023-01-22 22:34:12,408 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : products.name
+2023-01-22 22:34:12,408 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : products.store_id
+2023-01-22 22:34:12,409 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.FetchStyleLoadPlanBuildingAssociationVisitationStrategy] (JPA Startup Thread) Building LoadPlan...
+2023-01-22 22:34:12,419 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,427 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,429 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,430 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,430 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,431 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,431 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,431 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,432 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,432 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,432 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,433 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,433 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,433 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,434 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,434 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?, ?)
+2023-01-22 22:34:12,435 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,437 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,437 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?, ?)
+2023-01-22 22:34:12,437 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,437 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,437 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?, ?)
+2023-01-22 22:34:12,438 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,438 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,438 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id in (?, ?)
+2023-01-22 22:34:12,439 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,439 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Store)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Store, querySpaceUid=<gen:0>, path=org.acme.resources.Store)
+          - CollectionAttributeFetchImpl(collection=org.acme.resources.Store.products, querySpaceUid=<gen:1>, path=org.acme.resources.Store.products)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=org.acme.resources.Product, querySpaceUid=<gen:2>, path=org.acme.resources.Store.products.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Store)
+          - SQL table alias mapping - store0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(products)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=org.acme.resources.Store.products)
+                - SQL table alias mapping - products1_
+                - alias suffix - 1_
+                - suffixed key columns - {store_id1_2_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=org.acme.resources.Product)
+                      - SQL table alias mapping - product2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+2023-01-22 22:34:12,439 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Store [NONE:-1]: select store0_.id as id1_1_0_, store0_.city as city2_1_0_, store0_.name as name3_1_0_, products1_.store_id as store_id1_2_1_, product2_.id as product_2_2_1_, product2_.id as id1_0_2_, product2_.name as name2_0_2_, product2_.store_id as store_id3_0_2_ from store store0_ left outer join store_to_product products1_ on store0_.id=products1_.store_id left outer join product product2_ on products1_.product_id=product2_.id where store0_.id=?
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread) Static SQL for entity: org.acme.resources.Product
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Version select: select id from product where id =?
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Snapshot select: select product_.id, product_.name as name2_0_, product_.store_id as store_id3_0_ from product product_ where product_.id=?
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Insert 0: insert into product (name, store_id, id) values (?, ?, ?)
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Update 0: update product set name=?, store_id=? where id=?
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Delete 0: delete from product where id=?
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.ent.AbstractEntityPersister] (JPA Startup Thread)  Identity insert: insert into product (name, store_id) values (?, ?)
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.spa.QuerySpacesImpl] (JPA Startup Thread) Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70ea5b34]
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : name
+2023-01-22 22:34:12,440 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.per.wal.spi.MetamodelGraphWalker] (JPA Startup Thread) Visiting attribute path : store_id
+2023-01-22 22:34:12,441 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.int.FetchStyleLoadPlanBuildingAssociationVisitationStrategy] (JPA Startup Thread) Building LoadPlan...
+2023-01-22 22:34:12,441 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,441 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,441 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,441 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,442 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,442 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,442 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,443 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,443 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,443 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,443 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,445 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,445 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,445 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,445 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,446 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,446 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,446 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,447 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,447 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,447 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?, ?)
+2023-01-22 22:34:12,447 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,448 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,448 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?, ?)
+2023-01-22 22:34:12,448 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,449 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,449 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?, ?)
+2023-01-22 22:34:12,449 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,449 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,449 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id in (?, ?)
+2023-01-22 22:34:12,450 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.exe.int.LoadQueryJoinAndFetchProcessor] (JPA Startup Thread) processing queryspace <gen:0>
+2023-01-22 22:34:12,450 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.pla.bui.spi.LoadPlanTreePrinter] (JPA Startup Thread) LoadPlan(entity=org.acme.resources.Product)
+    - Returns
+       - EntityReturnImpl(entity=org.acme.resources.Product, querySpaceUid=<gen:0>, path=org.acme.resources.Product)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.acme.resources.Product)
+          - SQL table alias mapping - product0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2023-01-22 22:34:12,450 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.ent.pla.EntityLoader] (JPA Startup Thread) Static select for entity org.acme.resources.Product [NONE:-1]: select product0_.id as id1_0_0_, product0_.name as name2_0_0_, product0_.store_id as store_id3_0_0_ from product product0_ where product0_.id=?
+2023-01-22 22:34:12,456 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,457 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,457 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,457 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,457 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,458 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?, ?)
+2023-01-22 22:34:12,458 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?, ?)
+2023-01-22 22:34:12,458 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?, ?)
+2023-01-22 22:34:12,458 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?, ?)
+2023-01-22 22:34:12,459 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id in (?, ?)
+2023-01-22 22:34:12,459 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.loa.col.BasicCollectionLoader] (JPA Startup Thread) Static select for collection org.acme.resources.Store.products: select products0_.store_id as store_id1_2_1_, products0_.product_id as product_2_2_1_, product1_.id as id1_0_0_, product1_.name as name2_0_0_, product1_.store_id as store_id3_0_0_ from store_to_product products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.store_id=?
+2023-01-22 22:34:12,508 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.too.sch.spi.SchemaManagementToolCoordinator] (JPA Startup Thread) No schema actions specified
+2023-01-22 22:34:12,509 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.too.sch.spi.SchemaManagementToolCoordinator] (JPA Startup Thread) No actions specified; doing nothing
+2023-01-22 22:34:12,516 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.que.spi.NamedQueryRepository] (JPA Startup Thread) Checking 0 named HQL queries
+2023-01-22 22:34:12,517 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.que.spi.NamedQueryRepository] (JPA Startup Thread) Checking 0 named SQL queries
+2023-01-22 22:34:12,522 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.ser.int.SessionFactoryServiceRegistryImpl] (JPA Startup Thread) EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2023-01-22 22:34:12,534 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryRegistry] (JPA Startup Thread) Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@2a8c7b19
+2023-01-22 22:34:12,534 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryRegistry] (JPA Startup Thread) Registering SessionFactory: 1183c37d-f657-4cea-97a6-be153c2088c2 (<unnamed>)
+2023-01-22 22:34:12,534 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryRegistry] (JPA Startup Thread) Not binding SessionFactory to JNDI, no JNDI name configured
+2023-01-22 22:34:12,691 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [id] in table [product]; found [int4 (Types#INTEGER)], but expecting [int8 (Types#BIGINT)]
+2023-01-22 22:34:12,709 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.map.Table] (Hibernate post-boot validation thread for <default>) No alter strings for table : store
+2023-01-22 22:34:12,710 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.map.Table] (Hibernate post-boot validation thread for <default>) No alter strings for table : store_to_product
+2023-01-22 22:34:12,751 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
+
+alter table if exists product add column store_id int8;
+alter table if exists store_to_product add constraint store_id_fk foreign key (store_id) references store;
+
+2023-01-22 22:34:12,896 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] INFO  [io.quarkus] (Quarkus Main Thread) code-with-quarkus 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.15.3.Final) started in 6.729s. Listening on: http://localhost:8080
+2023-01-22 22:34:12,934 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-01-22 22:34:12,936 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, vertx]
+2023-01-22 22:40:07,530 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Console Shutdown Hook) Failed to write out.
+2023-01-22 22:40:07,588 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.int.SessionFactoryImpl] (Shutdown thread) HHH000031: Closing
+2023-01-22 22:40:07,589 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.typ.spi.TypeConfiguration$Scope] (Shutdown thread) Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@201ae851] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@49ab4ae1]
+2023-01-22 22:40:07,590 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.ser.int.AbstractServiceRegistryImpl] (Shutdown thread) Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2023-01-22 22:40:07,591 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.boo.reg.int.BootstrapServiceRegistryImpl] (Shutdown thread) Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2023-01-22 22:40:07,596 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] DEBUG [org.hib.orm.beans] (Shutdown thread) HHH10005004: Stopping BeanContainer : io.quarkus.hibernate.orm.runtime.cdi.QuarkusArcBeanContainer@34c7a00c
+2023-01-22 22:40:07,604 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
+2023-01-22 22:40:07,603 ibm-pf2lx27x code-with-quarkus-dev.jar[8080] INFO  [io.quarkus] (Shutdown thread) code-with-quarkus stopped in 0.069s
